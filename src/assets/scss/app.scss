@@ -1,0 +1,125 @@
+@import "./fonts";
+
+#contentBox {
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  position: fixed;
+  border-radius: 50%;
+  mix-blend-mode: color;
+  z-index: 100;
+}
+
+#box {
+  display: none;
+  width: 75px;
+  height: 75px;
+  background-color: #fff;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  @media (min-width: 993px) {
+    display: block;
+  }
+}
+#box1 {
+  display: none;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  @media (min-width: 993px) {
+    display: block;
+  }
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.sticky-inner-wrapper {
+  z-index: 9999;
+  left: 50px;
+  top: 20px;
+}
+
+img {
+  &.logo-dark {
+    cursor: pointer;
+    width: 60px;
+    height: 100%;
+  }
+}
+.menu-icon-container {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  .menu-line {
+    width: 24px;
+    height: 1px;
+    background-color: black;
+    margin: 2.5px 0;
+    &:nth-child(2) {
+      transition: all 0.25s ease-in;
+      transform: scaleX(0.8);
+      transform-origin: right;
+    }
+  }
+  &:hover {
+    .menu-line {
+      &:nth-child(2) {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.get-in-touch {
+  margin-top: 50px;
+  line-height: 2;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 45vh;
+  margin-right: 50px;
+  @media (max-width: 992px) {
+    margin-top: 30px;
+  }
+  .link {
+    color: #f84525;
+    margin-bottom: 10px;
+  }
+  .phone {
+    a {
+      color: #1f1e1d;
+    }
+  }
+  .email {
+    opacity: 0.8;
+    font-weight: 300;
+    a {
+      color: #1f1e1d;
+    }
+  }
+  color: #f9f9f9;
+}
+
+.projects-black-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: black;
+}
