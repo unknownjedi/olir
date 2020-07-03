@@ -18,7 +18,7 @@ function Box(){
 // var hoverBox =document.getElementsByClassName('hoverBox');
 function mouseOver(){
   var isMouseOver=false;
-  $(window).on('mouseover','img',function(){
+  $('img').on('mouseover',function(){
     isMouseOver=!isMouseOver;
   })
   // for(let i=0;i<imgTag.length;i++){
@@ -64,11 +64,11 @@ const Layout = ({ children }) => {
     //     hoverBox[i].setAttribute('id','box');
     //   }
     // });
-    $(window).on('mouseover','img',function(){
+    $('img').on('mouseover',function(){
       console.log('Image hovered');
       $('.hoverBox').attr('id','box1');
     })
-    $(window).on('mouseout','img',function(){
+    $('img').on('mouseout',function(){
         $('.hoverBox').attr('id','box');
     })
 

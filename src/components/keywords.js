@@ -22,7 +22,7 @@ function Box(){
 
 function mouseOver(){
   var isMouseOver=false;
-  $(window).on('mouseover','img',function(){
+  $('img').on('mouseover',function(){
     isMouseOver=!isMouseOver;
   })
   // for(let i=0;i<imgTag.length;i++){
