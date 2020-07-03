@@ -7,6 +7,11 @@ import $ from 'jquery'
 
 // let $ = require('jquery')(window)
 // $ = window.$
+if (typeof window !== "undefined") {
+  window.WOW = require("wow.js")
+  window.$ = require('jquery')
+  $ = require('jquery')
+}
 function Box(){
   if(mouseOver()){
     return <div id="box1" className="hoverBox" />
@@ -27,10 +32,6 @@ function mouseOver(){
   //   })
   // }
   return isMouseOver;
-}
-
-if (typeof window !== "undefined") {
-  window.WOW = require("wow.js")
 }
 
 const Layout = ({ children }) => {

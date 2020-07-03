@@ -12,6 +12,12 @@ const fontStyles = ["light", "bold", ""]
 // $ = window.$
 // let $ = require('jquery')(window)
 // var imgTag = document.getElementsByTagName('img');
+
+if (typeof window !== "undefined") {
+  // window.WOW = require("wow.js")
+  window.$ = require('jquery')
+  $ = require('jquery')
+}
 function Box(){
   if(mouseOver()){
     return <div id="box1" className="hoverBox" />
