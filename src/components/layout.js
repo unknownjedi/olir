@@ -5,20 +5,27 @@ import "../assets/scss/animate.min.css"
 import { TweenMax } from "gsap"
 import $ from 'jquery'
 
-
+// let $ = require('jquery')(window)
+// $ = window.$
 function Box(){
   if(mouseOver()){
-    return <div id="box1" class="hoverBox" />
+    return <div id="box1" className="hoverBox" />
   }else{
-    return <div id="box" class="hoverBox"/>
+    return <div id="box" className="hoverBox"/>
   }
 }
-
+var imgTag = document.getElementsByTagName('img');
+var hoverBox =document.getElementsByClassName('hoverBox');
 function mouseOver(){
   var isMouseOver=true;
-  $('img').mouseover(function(){
+  $(document).on('mouseover','img',function(){
     isMouseOver=!isMouseOver;
   })
+  // for(let i=0;i<imgTag.length;i++){
+  //   imgTag[i].addEventListener('mouseover',function(event){
+  //       isMouseOver=!isMouseOver;
+  //   })
+  // }
   return isMouseOver;
 }
 
@@ -35,11 +42,33 @@ const Layout = ({ children }) => {
       TweenMax.to(".hoverBox", 0.2, { x: clientX, y: clientY })
     })
 
-    $('img').mouseover(function(){
+    // imgTag.addEventListener('mouseover',function(event){
+    //   for(let i=0;i<hoverBox.length;i++){
+    //     hoverBox[i].setAttribute('id','box1');
+    //   }
+    // });
+    // for(let k=0;k<imgTag.length;k++){
+    //   imgTag[k].addEventListener('mouseover',function(event){
+    //     for(let i=0;i<hoverBox.length;i++){
+    //       hoverBox[i].setAttribute('id','box1');
+    //     }
+    //   });
+    //   imgTag[k].addEventListener('mouseout',function(event){
+    //     for(let i=0;i<hoverBox.length;i++){
+    //       hoverBox[i].setAttribute('id','box');
+    //     }
+    //   });
+    // }
+    // imgTag.addEventListener('mouseout',function(event){
+    //   for(let i=0;i<hoverBox.length;i++){
+    //     hoverBox[i].setAttribute('id','box');
+    //   }
+    // });
+    $(document).on('mouseover','img',function(){
       console.log('Image hovered');
       $('.hoverBox').attr('id','box1');
     })
-    $('img').mouseout(function(){
+    $(document).on('mouseout','img',function(){
         $('.hoverBox').attr('id','box');
     })
 

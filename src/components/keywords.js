@@ -9,19 +9,27 @@ import $ from 'jquery'
 
 const fontStyles = ["light", "bold", ""]
 
+// $ = window.$
+// let $ = require('jquery')(window)
+var imgTag = document.getElementsByTagName('img');
 function Box(){
   if(mouseOver()){
-    return <div id="box1" class="hoverBox" />
+    return <div id="box1" className="hoverBox" />
   }else{
-    return <div id="box" class="hoverBox"/>
+    return <div id="box" className="hoverBox"/>
   }
 }
 
 function mouseOver(){
   var isMouseOver=true;
-  $('img').mouseover(function(){
+  $(document).on('mouseover','img',function(){
     isMouseOver=!isMouseOver;
   })
+  // for(let i=0;i<imgTag.length;i++){
+  //   imgTag[i].addEventListener('mouseover',function(event){
+  //       isMouseOver=!isMouseOver;
+  //   })
+  // }
   return isMouseOver;
 }
 
