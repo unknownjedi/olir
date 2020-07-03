@@ -12,7 +12,6 @@ import Sticky from "react-stickynode"
 
 
 import { Fullpage, Slide, HorizontalSlider } from 'fullpage-react';
-import $ from 'jquery'
 
 import { css } from "@emotion/core"
 import OurWorks from "../components/ourworks"
@@ -21,7 +20,7 @@ import OurWorks from "../components/ourworks"
 export default () => {
   const fullPageOptions = {
     // for mouse/wheel events
-    
+
     // represents the level of force required to generate a slide change on non-mobile, 10 is default
     scrollSensitivity: 3,
   

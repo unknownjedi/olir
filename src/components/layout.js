@@ -3,14 +3,8 @@ import { Global, css } from "@emotion/core"
 import Header from "./header"
 import "../assets/scss/animate.min.css"
 import { TweenMax } from "gsap"
-import $ from 'jQuery'
-import ReactDOM from 'react-dom'
+import $ from 'jquery'
 
-var pageArr = ["home","why-us","services","clients","ourworks"];
-
-var scrollPos=0;
-var previousScrollPos=0;
-var pageNo=0;
 
 function Box(){
   if(mouseOver()){
@@ -40,7 +34,7 @@ const Layout = ({ children }) => {
       const { clientX, clientY } = event
       TweenMax.to(".hoverBox", 0.2, { x: clientX, y: clientY })
     })
-    
+
     $('img').mouseover(function(){
       console.log('Image hovered');
       $('.hoverBox').attr('id','box1');
