@@ -7,6 +7,16 @@ import $ from 'jquery/dist/jquery.slim'
 
 // let $ = require('jquery')(window)
 // $ = window.$
+
+// const {JSDOM} = require('jsdom');
+// const myJSDOM = new JSDOM(html);
+// var jsdom = require('jsdom')
+
+// var $ = require('jquery');
+window.$ = $;
+window.jQuery = $;
+global.jQuery = $;
+
 if (typeof window !== "undefined") {
   window.WOW = require("wow.js")
 }

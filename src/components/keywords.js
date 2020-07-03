@@ -18,6 +18,13 @@ const fontStyles = ["light", "bold", ""]
 //   window.$ = require('jquery')
 //   $ = require('jquery')
 // }
+
+// const {JSDOM} = require('jsdom');
+// const myJSDOM = new JSDOM(html);
+// const $ = require('jquery');
+window.$ = $;
+window.jQuery = $;
+
 function Box(){
   if(mouseOver()){
     return <div id="box1" className="hoverBox" />
