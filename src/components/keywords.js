@@ -5,7 +5,7 @@ import { cssVariables } from "../helpers/colors"
 import { keywords } from "../content/keywords"
 import { KeywordsContainer } from "../styled/StyledComponents"
 
-import $ from 'jquery'
+import $ from 'jquery/dist/jquery.slim'
 
 const fontStyles = ["light", "bold", ""]
 
@@ -13,11 +13,11 @@ const fontStyles = ["light", "bold", ""]
 // let $ = require('jquery')(window)
 // var imgTag = document.getElementsByTagName('img');
 
-if (typeof window !== "undefined") {
-  // window.WOW = require("wow.js")
-  window.$ = require('jquery')
-  $ = require('jquery')
-}
+// if (typeof window !== "undefined") {
+//   // window.WOW = require("wow.js")
+//   window.$ = require('jquery')
+//   $ = require('jquery')
+// }
 function Box(){
   if(mouseOver()){
     return <div id="box1" className="hoverBox" />

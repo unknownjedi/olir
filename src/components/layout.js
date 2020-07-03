@@ -3,14 +3,12 @@ import { Global, css } from "@emotion/core"
 import Header from "./header"
 import "../assets/scss/animate.min.css"
 import { TweenMax } from "gsap"
-import $ from 'jquery'
+import $ from 'jquery/dist/jquery.slim'
 
 // let $ = require('jquery')(window)
 // $ = window.$
 if (typeof window !== "undefined") {
   window.WOW = require("wow.js")
-  window.$ = require('jquery')
-  $ = require('jquery')
 }
 function Box(){
   if(mouseOver()){
