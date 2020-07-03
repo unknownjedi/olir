@@ -11,7 +11,7 @@ const fontStyles = ["light", "bold", ""]
 
 // $ = window.$
 // let $ = require('jquery')(window)
-var imgTag = document.getElementsByTagName('img');
+// var imgTag = document.getElementsByTagName('img');
 function Box(){
   if(mouseOver()){
     return <div id="box1" className="hoverBox" />
@@ -21,7 +21,7 @@ function Box(){
 }
 
 function mouseOver(){
-  var isMouseOver=true;
+  var isMouseOver=false;
   $(document).on('mouseover','img',function(){
     isMouseOver=!isMouseOver;
   })

@@ -14,10 +14,10 @@ function Box(){
     return <div id="box" className="hoverBox"/>
   }
 }
-var imgTag = document.getElementsByTagName('img');
-var hoverBox =document.getElementsByClassName('hoverBox');
+// var imgTag = document.getElementsByTagName('img');
+// var hoverBox =document.getElementsByClassName('hoverBox');
 function mouseOver(){
-  var isMouseOver=true;
+  var isMouseOver=false;
   $(document).on('mouseover','img',function(){
     isMouseOver=!isMouseOver;
   })
